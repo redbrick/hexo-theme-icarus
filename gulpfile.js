@@ -2,8 +2,9 @@ var gulp = require('gulp');
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var cleanCSS = require('gulp-clean-css');
+var bower = require('gulp-bower');
 
-gulp.task('minify-all', ['vendor-styles', 'vendor-fonts', 'vendor-images', 'scripts']);
+gulp.task('default', ['bower','vendor-styles', 'vendor-fonts', 'vendor-images', 'scripts']);
 
 gulp.task('vendor-styles', function () {
     gulp.src([
@@ -14,7 +15,7 @@ gulp.task('vendor-styles', function () {
         './source/vendor/justified-gallery/justifiedGallery.min.css'
         ])
         .pipe(concat('vendor-styles.min.css'))
-        .pipe(cleanCSS())
+        .pipe(cleanCSS({compatibility: 'ie9', processImport: false, keepSpecialComments: 0}))
         .pipe(gulp.dest('./source/vendor/dest/css/'))
 });
 
@@ -35,7 +36,7 @@ gulp.task('scripts', function () {
         './source/js/contact.js',
         './source/js/form.js'
     ])
-        .pipe(concat('vendor-scripts.min.js'))
+        .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./source/vendor/dest/js/'))
 });
@@ -58,4 +59,8 @@ gulp.task('vendor-images', function () {
         './source/vendor/lightgallery/img/*'
     ])
         .pipe(gulp.dest('./source/vendor/dest/img'));
+});
+
+gulp.task('bower', function() {
+    return bower();
 });
