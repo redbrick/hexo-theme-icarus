@@ -36,7 +36,7 @@ gulp.task('scripts', function () {
         './source/js/contact.js',
         './source/js/form.js'
     ])
-        .pipe(concat('main.min.js'))
+        .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./source/vendor/dest/js/'))
 });
