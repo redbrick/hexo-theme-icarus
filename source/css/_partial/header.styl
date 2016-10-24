@@ -276,13 +276,18 @@ $nav-link
         position: relative
         .search-form-input
             width: 100%
-            padding: 0 24px 0 15px
             line-height: logo-height
             height: logo-height !important
-            border-radius: ((logo-height + 2)/2)
+            border-radius: 50%
+            cursor: pointer
             &::-webkit-search-results-decoration
             &::-webkit-search-cancel-button
                 -webkit-appearance: none
+            .fa-search
+                margin: 0 12px
+                &:hover, &:focus
+                    color:  color-link
+
         .search-form-submit
             top: 50%
             right: 15px
