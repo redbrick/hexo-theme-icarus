@@ -1,10 +1,10 @@
 #Icarus
 
 ### The blog theme you may fall in love with, coming to Hexo. 
-### Click here to [Preview](http://ppoffice.github.io/hexo-theme-icarus/) the theme.
-![](http://ppoffice.github.io/hexo-theme-icarus/gallery/preview.png "")
+### Click here to [Preview](https://alpha.redbrick.dcu.ie/) the theme.
+![](http://image.prntscr.com/image/4db6552e12434ae9b405bb301f864a1b.png "")
 
-#### [View Documentation](https://github.com/ppoffice/hexo-theme-icarus/wiki)
+#### [View Documentation](hhttps://github.com/redbrick/hexo-theme-icarus/wiki)
 :star: It is strongly recommended that you read the docs before using Icarus.
 
 ## Features
